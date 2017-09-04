@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style media="screen">
+	*{
+		font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+		font-weight: bold;
+		margin:0;
+	}
+	body{
+		background-color: #EFEFEF;
+	}
+	header{
+		height:700px;
+		background-image: url(../resources/pic/雪之下裁剪.png);
+		color:white;
+		background-size: cover;
+	}
+	#navigation{
+		height:40px;
+		background-color: #7F97DD;
+		position: relative;
+		opacity: 0.5;
+	}
+	#navigation>.div1{
+		height:100%;
+		width:70px;
+		box-sizing: border-box;
+		margin-left: 190px;
+		padding-left: 31px;
+		padding-top: 10px;
+		float:left;
+
+		background-image: url(../resources/icon/首页.png);
+		background-position: 0 4px;
+		background-repeat: no-repeat;
+
+
+
+	}
+	#navigation a{
+		font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+		font-weight: bold;
+		font-size: 16px;
+		text-decoration: none;
+		color:white;
+	}
+
+	#navigation>.div2{
+		height:100%;
+		width:70px;
+		box-sizing: border-box;
+		margin-left: 0px;
+		float:left;
+		padding-left: 36px;
+		padding-top: 10px;
+
+		background-image: url(../resources/icon/分类.png);
+		background-repeat: no-repeat;
+		background-position: 0 7px;
+
+	}
+	#navigation>.div3{
+		height:100%;
+		width:70px;
+		box-sizing: border-box;
+		margin-left: 3px;
+		float:left;
+		padding-left: 31px;
+		padding-top: 10px;
+
+		background-image: url(../resources/icon/留言板.png);
+		background-repeat: no-repeat;
+		background-position: 0 5px;
+	}
+	#navigation>.div4{
+		height:100%;
+		width:70px;
+		box-sizing: border-box;
+		margin-left: 3px;
+		float:left;
+		padding-left: 35px;
+		padding-top: 10px;
+
+		background-image: url(../resources/icon/归档.png);
+		background-repeat: no-repeat;
+		background-position: 0 6px;
+	}
+	#navigation>.div5{
+		height:100%;
+		width:70px;
+		box-sizing: border-box;
+		margin-left: 3px;
+		float:left;
+		padding-left: 35px;
+		padding-top: 10px;
+
+		background-image: url(../resources/icon/火箭.png);
+		background-repeat: no-repeat;
+		background-position: 0 6px;
+	}
+	#navigation>img{
+		position: absolute;
+		top: 5px;
+		right:10%;
+	}
+	#body{
+		height:1000px;
+		width:80%;
+		margin: 80px auto 0 auto;
+
+		position: relative;
+
+	}
+
+	#body>#link{
+		width:30%;
+		float:right;
+		border-radius: 10px;
+		background-color: white;
+		text-align: center;
+
+	}
+	#comment{
+		width:30%;
+		border-radius: 10px;
+		float: right;
+		clear: both;
+		background-color: white;
+		height: 515px;
+		margin-top: 20px;
+	}
+	#comment .floater{
+
+		height:28px;
+		background-color: #97DFFD;
+		display: inline-block;
+		border-radius: 3px;
+		font-family: "Microsoft YaHei";
+		font-weight: 100;
+		color:white;
+		font-size: 13px;
+		line-height: 28px;
+		padding-left: 33px;
+		padding-right: 12px;
+		margin-top: 20px;
+		margin-left: -14px;
+		-moz-box-shadow:2px 1px 3px #C7C7C7; -webkit-box-shadow:2px 1px 3px #C7C7C7; box-shadow:2px 1px 3px #C7C7C7;
+	}
+	#comment .shadow{
+		width:0px;
+		height:0px;
+
+		margin-left: -28px;
+		border-right: 14px solid #47456D;
+		border-bottom: 14px solid transparent;
+		border-left: 14px solid transparent;
+
+
+	}
+
+	#link>img:first-of-type{
+		width: 92%;
+		float: right;
+
+		margin:3% 3% 0 3%;
+	}
+	#link>span{
+		color:#444444;
+		font-size: 16px;
+		display: inline-block;
+		padding-top: 10px;
+
+	}
+
+	#link>#img1{
+		display: block;
+		float:left;
+		margin-top: 5px;
+		margin-left: 30%;
+	}
+	#body>.article{
+		width:66%;
+		background-color: white;
+		border-radius: 10px;
+		position:relative;
+		border-bottom: 1px solid white;
+	}
+
+	.article>.title{
+		padding-top: 25px;
+		padding-bottom: 14px;
+		text-align: center;
+		font-weight: bold;
+		position: relative;
+		font-size: 25px;
+		color:#444444;
+
+	}
+	.article>.floater{
+		width:77px;
+		height:28px;
+		background-color: #97DFFD;
+		position: absolute;
+		left:-15px;
+		border-radius: 3px;
+		top: 28px;
+		font-family: "Microsoft YaHei";
+		font-weight: 100;
+		color:white;
+		font-size: 13px;
+		line-height: 28px;
+		text-align: right;
+		padding-right: 8px;
+		-moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #C7C7C7;
+	}
+	.article>.shadow{
+		width:0px;
+		height:0px;
+
+		left:-28px;
+		border-right: 14px solid #47456D;
+		border-bottom: 14px solid transparent;
+		border-left: 14px solid transparent;
+		position: absolute;
+		top:56px;
+	}
+	.article>.info{
+		text-align: center;
+
+	}
+	.info>span{
+		color:#555555;
+		font-size: 14px;
+		font-weight: 100;
+	}
+	.article .content{
+		font-weight: bold;
+		font-size: 15px;
+		margin-top: 12px;
+		margin-left: 15px;
+		margin-right: 15px;
+
+	}
+	.message{
+		width:66%;
+		background-color: white;
+		border-radius: 10px;
+		border-bottom: 1px solid white;
+		margin-top: 40px;
+
+		padding-top: 10px;
+		padding-left: 14px;
+		padding-right: 14px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing: border-box;
+
+	}
+
+	.message .info{
+
+
+		list-style: none;
+		padding: 0;
+		margin-top: 14px;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.message .info>li{
+		width:33.3%;
+		height: 26px;
+
+
+		padding: 0;
+		vertical-align: bottom;
+		float:left;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing: border-box;
+	}
+	.info>li>input{
+		border:1px solid #C5C5C5;
+		background-color: #F4F6F7;
+		border-radius: 3px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing: border-box;
+		padding-left: 10px;
+		font-weight: normal;
+		font-size: 14px;
+
+	}
+	#submitbutton {
+
+		margin-bottom: 40px;
+	}
+	#submitbutton button{
+		width: 100%;
+		height: 30px;
+		background-color: #97DFFD;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 30px;
+		font-size: 14px;
+		color:white;
+		font-weight: normal;
+		border-style: none;
+	}
+	.message .comment img{
+		border-radius: 32.5px;
+		float: left;
+		width:65px;
+	}
+	.message .comment{
+		border-bottom: 1px solid #E5EAED;
+		margin-top: 20px;
+
+		overflow: hidden; //这个使得图片禁锢在div中
+	}
+	.message .content{
+		margin-left: 65px;
+
+		padding-left: 10px;
+	}
+	</style>
+</head>
+<body>
+	<header>
+        <div id="navigation">
+            <div class="div1">
+                <a href="index.html">首页</a>
+            </div>
+            <div class="div2">
+                <a href="index.html">分类</a>
+            </div>
+            <div class="div3">
+                <a href="MessageBoard.html">留言</a>
+            </div>
+            <div class="div4">
+                <a href="index.html">归档</a>
+            </div>
+            <div class="div5">
+                <a href="index.html">关于</a>
+            </div>
+            <img src="../resources/icon/搜索.png">
+        </div>
+    </header>
+	<div id="body">
+		<div id="link">
+            <img src="../resources/pic/雪之下大头照.png">
+            <span>你能找到我吗？</span>
+            <div style="margin-top:15px;margin-bottom:20px;">
+                <a href="http://weibo.com/u/2091812971?refer_flag=1001030201_&is_all=1"  ><img title="微博" src="../resources/icon/微博.png" id="img1" style="width:40px;"></a>
+
+                <a href="https://github.com/kevinsagoodguy"><img title="github" src="../resources/icon//github.png"  style="width:40px;"></a>
+            </div>
+        </div>
+		<div id="comment">
+            <div class="floater">这些人都排着队来跟我说话</div>
+            <div class="shadow"></div>
+        </div>
+        <div id="comment" style="height:281px;">
+            <div class="floater">大家都排队来看这些</div>
+            <div class="shadow"></div>
+        </div>
+		<div class="article">
+			<div class="floater">留言板</div>
+			<div class="shadow"></div>
+            <div class="title">留言板</div>
+            <div class="info">
+                <img src="../resources/icon/发表.png" style="width:15px;vertical-align:middle;"><span>发表于 2017年8月28日</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/眼睛.png" style="width:15px;vertical-align:middle;"><span>500次围观</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/评论.png" style="width:15px;vertical-align:middle;"><span>评论24条</span>
+            </div>
+            <div class="content">
+				有什么话要对我说吗？这里是你畅所欲言的地方，可以咨询，可以交流，可以感叹，可以发飙，但不可以订外卖。<br><br>
+				<img src="../resources/pic/留言板.png" alt=""><br><br>
+
+            </div>
+
+        </div>
+		<div class="message">
+			<span style="font-size:19px;color:#444444;">发表评论</span>
+			<div style="margin-top:10px;">
+			<textarea name="name" placeholder="快点说点什么！"  style="width:100%;height:100px;background-color:#F4F6F7;border-radius:3px;font-size:15px;font-weight:normal;padding:11px;box-sizing:border-box;border:1px solid #C5C5C5;"></textarea><br>
+			</div>
+			<form action="" method="post">
+				<ul class="info">
+					<li style="padding-right:4px;"><input placeholder="昵称 *" type="text" name="username" style="width:100%;height:100%;"></li>
+					<li style="padding-left:4px;"><input type="text" placeholder="邮箱 *" name="email" style="width:100%;height:100%;"></li>
+					<li style="padding-left:8px;"><input type="text" name="address" placeholder="网址 *" style="width:100%;height:100%;"></li>
+				</ul>
+				<div id="submitbutton">
+					<button type="submit" name="button">发送~</button>
+				</div>
+			</form>
+			<span style="border-left:2px solid black;font-size:19px;font-weight:600;color:#444444;">&nbsp;&nbsp;评论&nbsp;1,559&nbsp;条</span><br><br>
+			<div class="comment">
+				<img src="../resources/pic/亚丝娜3.png" alt="" >
+				<div class="content">
+					<span style="font-size:14px;color:#444444;">Kevin</span>&nbsp;&nbsp;&nbsp;<span style="font-size:12px;background-color:#DFF0D8;color:#3C763D;font-weight:normal;padding:3px;border-radius:5px;">&nbsp;抖M&nbsp;</span><br>
+					<span style="font-size:12px;color:#AAAAAA;font-weight:normal;">2017年9月4日 下午5:34</span><br><br>
+					<span style="font-size:14px;color:black;font-weight:normal;line-height:22px;">很喜欢你的博客风格以及博客内容，可以友链一个吗！大佬！！！
+致橡树，www.kxiong520.cn</span><br><br>
+				</div>
+
+			</div>
+			<div class="comment">
+				<img src="../resources/pic/亚丝娜3.png" alt="" >
+				<div class="content">
+					<span style="font-size:14px;color:#444444;">Kevin</span>&nbsp;&nbsp;&nbsp;<span style="font-size:12px;background-color:#DFF0D8;color:#3C763D;font-weight:normal;padding:3px;border-radius:5px;">&nbsp;抖M&nbsp;</span><br>
+					<span style="font-size:12px;color:#AAAAAA;font-weight:normal;">2017年9月4日 下午5:34</span><br><br>
+					<span style="font-size:14px;color:black;font-weight:normal;line-height:22px;">很喜欢你的博客风格以及博客内容，可以友链一个吗！大佬！！！
+致橡树，www.kxiong520.cn</span><br><br>
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>
