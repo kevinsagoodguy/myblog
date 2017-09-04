@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+
+
+
+
+
+
+    </script>
+    <style media="screen">
+        *{
+            font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+            font-weight: bold;
+            margin:0;
+        }
+        body{
+            background-color: #EFEFEF;
+        }
+        header{
+            height:700px;
+            background-image: url(../resources/pic/雪之下裁剪.png);
+            color:white;
+            background-size: cover;
+        }
+        #navigation{
+            height:40px;
+            background-color: #7F97DD;
+            position: relative;
+            opacity: 0.5;
+        }
+        #navigation>.div1{
+            height:100%;
+            width:70px;
+            box-sizing: border-box;
+            margin-left: 190px;
+            padding-left: 31px;
+            padding-top: 10px;
+            float:left;
+
+            background-image: url(../resources/icon/首页.png);
+            background-position: 0 4px;
+            background-repeat: no-repeat;
+
+
+        }
+        #navigation a{
+            font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #navigation>.div2{
+            height:100%;
+            width:70px;
+            box-sizing: border-box;
+            margin-left: 0px;
+            float:left;
+            padding-left: 36px;
+            padding-top: 10px;
+
+            background-image: url(../resources/icon/分类.png);
+            background-repeat: no-repeat;
+            background-position: 0 7px;
+
+        }
+        #navigation>.div3{
+            height:100%;
+            width:70px;
+            box-sizing: border-box;
+            margin-left: 3px;
+            float:left;
+            padding-left: 31px;
+            padding-top: 10px;
+
+            background-image: url(../resources/icon/留言板.png);
+            background-repeat: no-repeat;
+            background-position: 0 5px;
+        }
+        #navigation>.div4{
+            height:100%;
+            width:70px;
+            box-sizing: border-box;
+            margin-left: 3px;
+            float:left;
+            padding-left: 35px;
+            padding-top: 10px;
+
+            background-image: url(../resources/icon/归档.png);
+            background-repeat: no-repeat;
+            background-position: 0 6px;
+        }
+        #navigation>.div5{
+            height:100%;
+            width:70px;
+            box-sizing: border-box;
+            margin-left: 3px;
+            float:left;
+            padding-left: 35px;
+            padding-top: 10px;
+
+            background-image: url(../resources/icon/火箭.png);
+            background-repeat: no-repeat;
+            background-position: 0 6px;
+        }
+        #navigation>img{
+            position: absolute;
+            top: 5px;
+            right:10%;
+        }
+        #body{
+            height:1000px;
+            width:80%;
+            margin: 80px auto 0 auto;
+
+            position: relative;
+
+        }
+
+        #body>#link{
+            width:30%;
+            float:right;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+
+        }
+        #comment{
+            width:30%;
+            border-radius: 10px;
+            float: right;
+            clear: both;
+            background-color: white;
+            height: 515px;
+            margin-top: 20px;
+        }
+        #comment .floater{
+
+            height:28px;
+            background-color: #97DFFD;
+            display: inline-block;
+            border-radius: 3px;
+            font-family: "Microsoft YaHei";
+            font-weight: 100;
+            color:white;
+            font-size: 13px;
+            line-height: 28px;
+            padding-left: 33px;
+            padding-right: 12px;
+            margin-top: 20px;
+            margin-left: -14px;
+            -moz-box-shadow:2px 1px 3px #C7C7C7; -webkit-box-shadow:2px 1px 3px #C7C7C7; box-shadow:2px 1px 3px #C7C7C7;
+        }
+        #comment .shadow{
+            width:0px;
+            height:0px;
+
+            margin-left: -28px;
+            border-right: 14px solid #47456D;
+            border-bottom: 14px solid transparent;
+            border-left: 14px solid transparent;
+
+
+        }
+
+        #link>img:first-of-type{
+            width: 92%;
+            float: right;
+
+            margin:3% 3% 0 3%;
+        }
+        #link>span{
+            color:#444444;
+            font-size: 16px;
+            display: inline-block;
+            padding-top: 10px;
+
+        }
+
+        #link>#img1{
+            display: block;
+            float:left;
+            margin-top: 5px;
+            margin-left: 30%;
+        }
+        #body>.article{
+            width:66%;
+
+            background-color: white;
+            border-radius: 10px;
+            position:relative;
+            border-bottom: 1px solid white;
+        }
+        .article>.floater{
+            width:77px;
+            height:28px;
+            background-color: #97DFFD;
+            position: absolute;
+            left:-15px;
+            border-radius: 3px;
+            top:105px;
+            font-family: "Microsoft YaHei";
+            font-weight: 100;
+            color:white;
+            font-size: 13px;
+            line-height: 28px;
+            text-align: right;
+            padding-right: 8px;
+            -moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #C7C7C7;
+        }
+        .article>.shadow{
+            width:0px;
+            height:0px;
+
+            left:-28px;
+            border-right: 14px solid #47456D;
+            border-bottom: 14px solid transparent;
+            border-left: 14px solid transparent;
+            position: absolute;
+            top:133px;
+        }
+        .article>.date-circle{
+            width:70px;
+            height: 70px;
+            box-sizing: border-box;
+            border-radius: 35px;
+            color:white;
+            background-color: #97DFFD;
+            -moz-box-shadow:0px 2px 5px #B3B3B3; -webkit-box-shadow:0px 2px 5px #B3B3B3; box-shadow:0px 2px 5px #B3B3B3;
+            position: absolute;
+            left:-35px;
+            top: -20px;
+            text-align: center;
+            padding-top: 6px;
+        }
+        .article>.title{
+
+            padding-top: 25px;
+            padding-bottom: 14px;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+            font-size: 25px;
+            color:#444444;
+
+        }
+        .article>.info{
+
+
+            text-align: center;
+        }
+        .info>span{
+            color:#555555;
+            font-size: 14px;
+            font-weight: 100;
+        }
+        .article .content{
+            font-weight: normal;
+            font-size: 15px;
+            margin-top: 70px;
+            margin-left: 15px;
+            margin-right: 15px;
+
+        }
+        .article .read-all{
+            width: 85px;
+            height: 25px;
+            background-color: #97DFFD;
+            font-weight: 100;
+            text-align: center;
+            color:white;
+            font-size: 12px;
+            line-height: 25px;
+            border-radius: 5px;
+            margin:15px auto 23px auto;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            font-size: 12px;
+            font-weight: 100;
+        }
+        .notfirst{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navigation">
+            <div class="div1">
+                <a href="index.html">首页</a>
+            </div>
+            <div class="div2">
+                <a href="index.html">分类</a>
+            </div>
+            <div class="div3">
+                <a href="index.html">留言</a>
+            </div>
+            <div class="div4">
+                <a href="index.html">归档</a>
+            </div>
+            <div class="div5">
+                <a href="index.html">关于</a>
+            </div>
+            <img src="../resources/icon/搜索.png">
+        </div>
+    </header>
+    <div id="body">
+
+        <div id="link">
+            <img src="../resources/pic/雪之下大头照.png">
+            <span>你能找到我吗？</span>
+            <div style="margin-top:15px;margin-bottom:20px;">
+                <a href="http://weibo.com/u/2091812971?refer_flag=1001030201_&is_all=1"  ><img title="微博" src="../resources/icon/微博.png" id="img1" style="width:40px;"></a>
+
+                <a href="https://github.com/kevinsagoodguy"><img title="github" src="../resources/icon//github.png"  style="width:40px;"></a>
+            </div>
+        </div>
+        <div id="comment">
+            <div class="floater">这些人都排着队来跟我说话</div>
+            <div class="shadow"></div>
+        </div>
+        <div id="comment" style="height:281px;">
+            <div class="floater">大家都排队来看这些</div>
+            <div class="shadow"></div>
+        </div>
+        <div class="article">
+            <div class="floater">创作集</div>
+            <div class="shadow"></div>
+            <div class="date-circle"><span style="font-weight:100;">8月<br></span><span style="font-size:29px;line-height:29px;">28</span></div>
+            <div class="title">野生 DIYgod 捕获指南</div>
+            <div class="info">
+                <img src="../resources/icon/发表.png" style="width:15px;vertical-align:middle;"><span>发表于 2017年8月28日</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/眼睛.png" style="width:15px;vertical-align:middle;"><span>500次围观</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/评论.png" style="width:15px;vertical-align:middle;"><span>评论24条</span>
+            </div>
+            <div class="content">
+
+嘘~ 你们看，我发现了什么？这里有一只落单的 DIYgod，我们可以尝试捕捉它，一只 DIYgod 可以为我们提供好几天的能量，它们富含大量的蛋白质，不过 DIYgod 可不好对付。我们慢慢从后面接近它，小心别发出任何声音。
+
+
+
+DIYgod 可能会在任何地方出现，但只要掌握了 DIYgod 的习性，捕获一只 DIYgod 并不是一件很难的事情
+            </div>
+            <div class="read-all">
+                <a href="http://www.baidu.com">阅读全文>></a>
+            </div>
+        </div>
+        <div class="article notfirst">
+            <div class="floater">闲言语</div>
+            <div class="shadow"></div>
+            <div class="date-circle"><span style="font-weight:100;">8月<br></span><span style="font-size:29px;line-height:29px;">14</span></div>
+            <div class="title">我们走过的</div>
+            <div class="info">
+                <img src="../resources/icon/发表.png" style="width:15px;vertical-align:middle;"><span>发表于 2017年8月28日</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/眼睛.png" style="width:15px;vertical-align:middle;"><span>500次围观</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/评论.png" style="width:15px;vertical-align:middle;"><span>评论24条</span>
+            </div>
+            <div class="content">
+                上面是一些我们一起去过的地方，其中有一个地点标的是 1996 年，这并不是我写错了，那年我 1 岁，我们是邻居，遗憾的是我们对那几年都没有任何记忆了......
+            </div>
+            <div class="read-all">
+                <a href="http://www.baidu.com">阅读全文>></a>
+            </div>
+        </div>
+        <div class="article notfirst">
+            <div class="floater">闲言语</div>
+            <div class="shadow"></div>
+            <div class="date-circle"><span style="font-weight:100;">8月<br></span><span style="font-size:29px;line-height:29px;">11</span></div>
+            <div class="title">让咕咕机再次伟大</div>
+            <div class="info">
+                <img src="../resources/icon/发表.png" style="width:15px;vertical-align:middle;"><span>发表于 2017年8月28日</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/眼睛.png" style="width:15px;vertical-align:middle;"><span>500次围观</span><span style="font-weight:bold">·</span>
+                <img src="../resources/icon/评论.png" style="width:15px;vertical-align:middle;"><span>评论24条</span>
+            </div>
+            <div class="content">
+
+咕咕机的官方发送平台非常反人类，发送接口没有任何长度和频率限制，又可以匿名发送…所以经常被人刷垃圾信息…群里经常有人反馈但官方就是不改…好在咕咕机是开发接口的
+
+就这样我封装了一个增强版 API，开源在 GitHub： https://github.com/DIYgod/gugu-node-api
+
+特性：强制微博登录、不允许匿名、长度限制、发送频率限制、跨域限制、黑名单机制
+
+好了，点击下面按钮，登录后继续跟我表白吧！
+            </div>
+            <div class="read-all">
+                <a href="http://www.baidu.com">阅读全文>></a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>
