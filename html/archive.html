@@ -205,6 +205,7 @@
 		border-radius: 10px;
 		position:relative;
 		border-bottom: 1px solid white;
+
 	}
 
 	.article>.title{
@@ -260,90 +261,16 @@
 		margin-top: 12px;
 		margin-left: 15px;
 		margin-right: 15px;
-
+		min-height: 300px;
+		padding-left: 40%;
+		padding-bottom: 50px;
 	}
-	.message{
-		width:66%;
-		background-color: white;
-		border-radius: 10px;
-		border-bottom: 1px solid white;
-		margin-top: 40px;
-		margin-bottom: 50px;
-
-		padding-top: 10px;
-		padding-left: 14px;
-		padding-right: 14px;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
-		box-sizing: border-box;
-
+	.article .content a{
+		text-decoration: none;
+		color:black;
 	}
 
-	.message .info{
 
-
-		list-style: none;
-		padding: 0;
-		margin-top: 14px;
-		overflow: hidden;
-		margin-bottom: 10px;
-	}
-	.message .info>li{
-		width:33.3%;
-		height: 26px;
-
-
-		padding: 0;
-		vertical-align: bottom;
-		float:left;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
-		box-sizing: border-box;
-	}
-	.info>li>input{
-		border:1px solid #C5C5C5;
-		background-color: #F4F6F7;
-		border-radius: 3px;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
-		box-sizing: border-box;
-		padding-left: 10px;
-		font-weight: normal;
-		font-size: 14px;
-
-	}
-	#submitbutton {
-
-		margin-bottom: 40px;
-	}
-	#submitbutton button{
-		width: 100%;
-		height: 30px;
-		background-color: #97DFFD;
-		border-radius: 5px;
-		text-align: center;
-		line-height: 30px;
-		font-size: 14px;
-		color:white;
-		font-weight: normal;
-		border-style: none;
-	}
-	.message .comment img{
-		border-radius: 32.5px;
-		float: left;
-		width:65px;
-	}
-	.message .comment{
-		border-bottom: 1px solid #E5EAED;
-		margin-top: 20px;
-
-		overflow: hidden; //这个使得图片禁锢在div中
-	}
-	.message .content{
-		margin-left: 65px;
-
-		padding-left: 10px;
-	}
 	</style>
 </head>
 <body>
@@ -418,60 +345,45 @@
 			</div>
         </div>
 		<div class="article">
-			<div class="floater">留言板</div>
+			<div class="floater">归档</div>
 			<div class="shadow"></div>
-            <div class="title">留言板</div>
-            <div class="info">
-                <img src="../resources/icon/发表.png" style="width:15px;vertical-align:middle;"><span>发表于 2017年8月28日</span><span style="font-weight:bold">·</span>
-                <img src="../resources/icon/眼睛.png" style="width:15px;vertical-align:middle;"><span>500次围观</span><span style="font-weight:bold">·</span>
-                <img src="../resources/icon/评论.png" style="width:15px;vertical-align:middle;"><span>评论24条</span>
-            </div>
+            <div class="title">归档</div>
+
             <div class="content">
-				有什么话要对我说吗？这里是你畅所欲言的地方，可以咨询，可以交流，可以感叹，可以发飙，但不可以订外卖。<br><br>
-				<img src="../resources/pic/留言板.png" alt=""><br><br>
+				<h3 style="color: #70CAEB;">2017年9月</h2>
+				<ul>
+					<a href="http://www.baidu.com"><li s><span style="color: #70CAEB;">blog诞生日</span></li></a>
+				</ul><br>
+				<h3 style="color: #70CAEB;">2017年9月</h2>
+				<ul>
+					<a href="http://www.baidu.com"><li s><span style="color: #70CAEB;">css与html入门</span></li></a>
+					<a href="http://www.baidu.com"><li s><span style="color: #70CAEB;">基于js的动态效果实现</span></li></a>
+				</ul><br>
+				<h3 style="color: #70CAEB;">2017年9月</h2>
+				<ul>
+					<a href="http://www.baidu.com"><li s><span style="color: #70CAEB;">blog诞生日</span></li></a>
+				</ul><br>
+				<h3 style="color: #70CAEB;">2017年9月</h2>
+				<ul>
+					<a href="http://www.baidu.com"><li s><span style="color: #70CAEB;">blog诞生日</span></li></a>
+				</ul><br>
+				<h3 style="color: #70CAEB;">2017年9月</h2>
+				<ul>
+					<a href="http://www.baidu.com"><li s><span style="color: #70CAEB;">blog诞生日</span></li></a>
+				</ul><br>
+				<h3 style="color: #70CAEB;">2017年9月</h2>
+				<ul>
+					<a href="http://www.baidu.com"><li s><span style="color: #70CAEB;">blog诞生日</span></li></a>
+				</ul><br>
+
+
+
+
 
             </div>
 
         </div>
-		<div class="message">
-			<span style="font-size:19px;color:#444444;">发表评论</span>
-			<div style="margin-top:10px;">
-			<textarea name="name" placeholder="快点说点什么！"  style="width:100%;height:100px;background-color:#F4F6F7;border-radius:3px;font-size:15px;font-weight:normal;padding:11px;box-sizing:border-box;border:1px solid #C5C5C5;"></textarea><br>
-			</div>
-			<form action="" method="post">
-				<ul class="info">
-					<li style="padding-right:4px;"><input placeholder="昵称 *" type="text" name="username" style="width:100%;height:100%;"></li>
-					<li style="padding-left:4px;"><input type="text" placeholder="邮箱 *" name="email" style="width:100%;height:100%;"></li>
-					<li style="padding-left:8px;"><input type="text" name="address" placeholder="网址 *" style="width:100%;height:100%;"></li>
-				</ul>
-				<div id="submitbutton">
-					<button type="submit" name="button">发送~</button>
-				</div>
-			</form>
-			<span style="border-left:2px solid black;font-size:19px;font-weight:600;color:#444444;">&nbsp;&nbsp;评论&nbsp;1,559&nbsp;条</span><br><br>
-			<div class="comment">
-				<img src="../resources/pic/亚丝娜3.png" alt="" >
-				<div class="content">
-					<span style="font-size:14px;color:#444444;">Kevin</span>&nbsp;&nbsp;&nbsp;<span style="font-size:12px;background-color:#DFF0D8;color:#3C763D;font-weight:normal;padding:3px;border-radius:5px;">&nbsp;抖M&nbsp;</span><br>
-					<span style="font-size:12px;color:#AAAAAA;font-weight:normal;">2017年9月4日 下午5:34</span><br><br>
-					<span style="font-size:14px;color:black;font-weight:normal;line-height:22px;">很喜欢你的博客风格以及博客内容，可以友链一个吗！大佬！！！
-致橡树，www.kxiong520.cn</span><br><br>
-				</div>
 
-			</div>
-			<div class="comment">
-				<img src="../resources/pic/亚丝娜3.png" alt="" >
-				<div class="content">
-					<span style="font-size:14px;color:#444444;">Kevin</span>&nbsp;&nbsp;&nbsp;<span style="font-size:12px;background-color:#DFF0D8;color:#3C763D;font-weight:normal;padding:3px;border-radius:5px;">&nbsp;抖M&nbsp;</span><br>
-					<span style="font-size:12px;color:#AAAAAA;font-weight:normal;">2017年9月4日 下午5:34</span><br><br>
-					<span style="font-size:14px;color:black;font-weight:normal;line-height:22px;">很喜欢你的博客风格以及博客内容，可以友链一个吗！大佬！！！
-致橡树，www.kxiong520.cn</span><br><br>
-				</div>
-
-			</div>
-
-
-		</div>
 	</div>
 </body>
 </html>

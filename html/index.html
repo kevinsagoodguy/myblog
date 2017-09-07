@@ -19,6 +19,8 @@
         }
         body{
             background-color: #EFEFEF;
+
+
         }
         header{
             height:700px;
@@ -54,20 +56,7 @@
             font-size: 16px;
         }
 
-        #navigation>.div2{
-            height:100%;
-            width:70px;
-            box-sizing: border-box;
-            margin-left: 0px;
-            float:left;
-            padding-left: 36px;
-            padding-top: 10px;
 
-            background-image: url(../resources/icon/分类.png);
-            background-repeat: no-repeat;
-            background-position: 0 7px;
-
-        }
         #navigation>.div3{
             height:100%;
             width:70px;
@@ -122,21 +111,26 @@
         }
 
         #body>#link{
-            width:30%;
-            float:right;
-            border-radius: 10px;
-            background-color: white;
-            text-align: center;
+    		width:30%;
+    		float:right;
+    		border-radius: 10px;
+    		background-color: white;
+    		text-align: center;
+    		-webkit-box-sizing:border-box;
+    		-moz-box-sizing:border-box;
+    		box-sizing: border-box;
+    		padding: 15px 0px 0 0px;
 
-        }
+    	}
         #comment{
             width:30%;
             border-radius: 10px;
             float: right;
             clear: both;
             background-color: white;
-            height: 515px;
+
             margin-top: 20px;
+            padding-bottom: 10px;
         }
         #comment .floater{
 
@@ -166,16 +160,43 @@
 
 
         }
+        #comment .discuss{
+            margin-left: 15px;
+            margin-right: 15px;
+            color:#444444;
+            font-weight: normal;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-bottom: 1px solid #DDDDDD;
+        }
+        #comment .content{
+            font-weight: normal;
+            margin-left: 40px;
+        }
+        #comment img{
+            float:left;
+            width:33px;
+            border-radius: 16.5px;
+        }
+
+        #comment .href{
+    		margin-top: 7px;
+    		padding: 0 15px 10px 15px;
+    		font-size: 13px;
+    		font-weight: normal;
+    		line-height: 30px;
+    	}
 
         #link>img:first-of-type{
             width: 92%;
-            float: right;
+            border-left: 1px solid #EFEFEF;
+    		border-right: 1px solid #EFEFEF;
 
-            margin:3% 3% 0 3%;
+
         }
         #link>span{
             color:#444444;
-            font-size: 16px;
+            font-size: 14px;
             display: inline-block;
             padding-top: 10px;
 
@@ -186,6 +207,7 @@
             float:left;
             margin-top: 5px;
             margin-left: 30%;
+
         }
         #body>.article{
             width:66%;
@@ -194,6 +216,9 @@
             border-radius: 10px;
             position:relative;
             border-bottom: 1px solid white;
+        }
+        #body>.article:last-of-type{
+            margin-bottom: 50px;
         }
         .article>.floater{
             width:77px;
@@ -295,17 +320,15 @@
             <div class="div1">
                 <a href="index.html">首页</a>
             </div>
-            <div class="div2">
-                <a href="index.html">分类</a>
-            </div>
+
             <div class="div3">
                 <a href="MessageBoard.html">留言</a>
             </div>
             <div class="div4">
-                <a href="index.html">归档</a>
+                <a href="archive.html">归档</a>
             </div>
             <div class="div5">
-                <a href="index.html">关于</a>
+                <a href="selfintro.html">关于</a>
             </div>
             <img src="../resources/icon/搜索.png">
         </div>
@@ -313,7 +336,7 @@
     <div id="body">
 
         <div id="link">
-            <img src="../resources/pic/雪之下大头照.png">
+            <img src="../resources/pic/亚丝娜眺望.jpg">
             <span>你能找到我吗？</span>
             <div style="margin-top:15px;margin-bottom:20px;">
                 <a href="http://weibo.com/u/2091812971?refer_flag=1001030201_&is_all=1"  ><img title="微博" src="../resources/icon/微博.png" id="img1" style="width:40px;"></a>
@@ -324,10 +347,44 @@
         <div id="comment">
             <div class="floater">这些人都排着队来跟我说话</div>
             <div class="shadow"></div>
+			<div class="discuss">
+				<img src="../resources/pic/亚丝娜3.png">
+				<div class="content">
+					<span style="font-weight:normal;font-size:13px;">积木君在「留言板」中说：</span><br>
+					<span style="font-weight:normal;font-size:12px;">现在个人博客都需要备案了吗？</span>
+				</div>
+			</div>
+			<div class="discuss">
+				<img src="../resources/pic/亚丝娜3.png">
+				<div class="content">
+					<span style="font-weight:normal;font-size:13px;">积木君在「留言板」中说：</span><br>
+					<span style="font-weight:normal;font-size:12px;">现在个人博客都需要备案了吗？现在个人博客都需要备案了吗？现在个人博客都需要备案了吗？现在个人博客都需要备案了吗？</span>
+				</div>
+			</div>
+			<div class="discuss">
+				<img src="../resources/pic/亚丝娜3.png">
+				<div class="content">
+					<span style="font-weight:normal;font-size:13px;">积木君在「留言板」中说：</span><br>
+					<span style="font-weight:normal;font-size:12px;">现在个人博客都需要备案了吗？</span>
+				</div>
+			</div>
+			<div class="discuss">
+				<img src="../resources/pic/亚丝娜3.png">
+				<div class="content">
+					<span style="font-weight:normal;font-size:13px;">积木君在「留言板」中说：</span><br>
+					<span style="font-weight:normal;font-size:12px;">现在个人博客都需要备案了吗？</span>
+				</div>
+			</div>
         </div>
-        <div id="comment" style="height:281px;">
+        <div id="comment" >
             <div class="floater">大家都排队来看这些</div>
             <div class="shadow"></div>
+			<div class="href">
+				<a href="index.html" style="text-decoration:none;color:#444444;font-weight:normal;font-size:13px;">薛凯元的博客主页 - </a><span style="color:#444444;font-weight:normal;">27,411次围观</span><br>
+				<a href="index.html" style="text-decoration:none;color:#444444;font-weight:normal;font-size:13px;">薛凯元的博客主页 - </a><span style="color:#444444;font-weight:normal;">27,411次围观</span><br>
+				<a href="index.html" style="text-decoration:none;color:#444444;font-weight:normal;font-size:13px;">薛凯元的博客主页 - </a><span style="color:#444444;font-weight:normal;">27,411次围观</span><br>
+				<a href="index.html" style="text-decoration:none;color:#444444;font-weight:normal;font-size:13px;">薛凯元的博客主页 - </a><span style="color:#444444;font-weight:normal;">27,411次围观</span><br>
+			</div>
         </div>
         <div class="article">
             <div class="floater">创作集</div>
